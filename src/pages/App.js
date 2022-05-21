@@ -1,26 +1,16 @@
-import * as React from 'react'
+import * as React from "react";
 
-import {
-  Header,
-  Hero,
-  AboutApp,
-  AboutUs,
-  VideoSec,
-  Appeducation,
-  DownloadAppSec,
-  Footer,
-} from "./components/components";
+import { HomePage } from "./components/components";
+// import { Route, Switch, Redirect } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <AboutApp />
-      <AboutUs />
-      <VideoSec />
-      <Appeducation />
-      <DownloadAppSec />
-      <Footer />
+      <HomePage />
+      {/* <Switch>
+      <Route exact path="/home" component={HomePage} />
+      <Redirect exact to="/home" />
+      </Switch> */}
     </>
   );
 }

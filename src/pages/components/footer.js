@@ -2,7 +2,7 @@ import React from "react";
 // import Facebook from '../icons/facebook.png'
 // import Twitter from '../icons/twitter.png'
 // import Instagram from '../icons/instagram.png'
-import { Instagram,Facebook,Twitter } from "../../images/images";
+import { Instagram, Facebook, Twitter } from "../../images/images";
 
 const Footer = () => {
   const backtotop = () => {
@@ -10,8 +10,8 @@ const Footer = () => {
   };
 
   window.addEventListener("scroll", function () {
-    var scroll = document.querySelector(".back-to-top-link");
-    scroll.classList.toggle("active-scroll", window.scrollY > 50);
+    var scroll = document.querySelector(".back-to-top-scroll");
+    scroll.classList.toggle("active-scroll", window.scrollY > 250);
     //   console.log("scroll")
   });
 
@@ -30,8 +30,7 @@ const Footer = () => {
             </a>
           </div>
 
-
-         <div className="f-ul-parent col-10 col-md-6 col-lg-2  text-md-center mb-3 mb-md-4 mb-lg-0 d-flex flex-column align-items-start  ">
+          <div className="f-ul-parent col-10 col-md-6 col-lg-2  text-md-center mb-3 mb-md-4 mb-lg-0 d-flex flex-column align-items-start  ">
             <p className="f-ul-title h5 fw-bold"> COMPANY</p>
             <ul className="f-ul list-unstyled d-flex flex-column align-items-start">
               <a href="#our_app" className="text-decoration-none f-links mt-2">
@@ -64,11 +63,35 @@ const Footer = () => {
                 <li className="f-li mt-2">lawondemand@gmail.com</li>
               </a>
             </ul>
-             <div className="social-media-icons d-flex justify-content-start mt-2"> 
-         <a href="https://www.facebook.com/" target="_blank"><img src={Facebook} width="18px" height="18px"  alt="" className="social-media-icons-img " /></a>
-         <a href="https://twitter.com/" target="_blank"><img src={Twitter}  width="18px" height="18px" alt="" className="social-media-icons-img " /></a>
-         <a href="https://www.instagram.com/" target="_blank"><img src={Instagram} width="18px" height="18px"  alt="" className="social-media-icons-img " /></a>
-         </div>  
+            <div className="social-media-icons d-flex justify-content-start mt-2">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  src={Facebook}
+                  width="18px"
+                  height="18px"
+                  alt=""
+                  className="social-media-icons-img "
+                />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img
+                  src={Twitter}
+                  width="18px"
+                  height="18px"
+                  alt=""
+                  className="social-media-icons-img "
+                />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img
+                  src={Instagram}
+                  width="18px"
+                  height="18px"
+                  alt=""
+                  className="social-media-icons-img "
+                />
+              </a>
+            </div>
           </div>
           <div className="f-ul-parent col-10 col-md-6 col-lg-3  text-md-center mb-3 mb-md-4 mb-lg-0">
             <p className="f-ul-title f-ul-title-qs h4 d-flex flex-column align-items-start  fw-bold">
@@ -97,8 +120,7 @@ const Footer = () => {
       </div>
 
       <div
-        href="#"
-        className="back-to-top-link  position-fixed rounded d-flex  justify-content-center align-items-center pt-1"
+        className="back-to-top-scroll  position-fixed rounded  justify-content-center align-items-center pt-1"
         onClick={backtotop}
       >
         <div className="back-to-top-icon  w-50 h-50  "></div>

@@ -1,7 +1,7 @@
 import React from "react";
 // import Googleplay from "../img/g_play.png";
 // import AppStore from "../img/app_store.png";
-
+import { AppStoreBtn, GoogleStoreBtn } from "../../images/images";
 const Installapp_sec = () => {
   return (
     <>
@@ -17,9 +17,9 @@ const Installapp_sec = () => {
                 className="g-install-app-link d-flex align-items-center justify-content-center   border rounded-3 "
               >
                 <img
-                  src="https://i.ibb.co/52x0yW4/favpng-app-store-download-google-play.png"
-                  alt=""
-                  className="g-install-app-img"
+                  src={GoogleStoreBtn}
+                  alt="img"
+                  className="g-install-app-img install-app-img w-100 h-100"
                 />
               </a>
             </div>
@@ -30,9 +30,9 @@ const Installapp_sec = () => {
                 className="app-install-app-link d-flex align-items-center justify-content-center   border rounded-3"
               >
                 <img
-                  src="https://i.ibb.co/3CdLDt8/g-pay.png"
+                  src={AppStoreBtn}
                   alt=""
-                  className="app-install-app-img"
+                  className="app-install-app-img install-app-img w-100 h-100"
                 />
               </a>
             </div>

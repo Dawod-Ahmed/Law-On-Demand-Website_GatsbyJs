@@ -1,6 +1,6 @@
 import React from "react";
 // import img from "../img/image2.svg"
-
+import { AppEducation } from "../../images/images";
 const About = () => {
   return (
     <>
@@ -13,11 +13,7 @@ const About = () => {
             What You Can Find In LOD?
           </h2>
           <div className="eduapp-main d-flex justify-content-around ">
-            <img
-              className="eduapp-img "
-              src="https://i.ibb.co/VJ9hVxX/aduapp.png"
-              alt=""
-            />
+            <img className="eduapp-img " src={AppEducation} alt="img" />
             <div class="eduapp-para-parent  ">
               <div class="mb-3 width-content mx-auto">
                 <h5 class="avenir-medium fw-bold fs-3">1. Laws for All</h5>

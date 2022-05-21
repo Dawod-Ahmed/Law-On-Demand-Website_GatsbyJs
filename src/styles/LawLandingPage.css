@@ -25,6 +25,7 @@
   padding: 0 30px;
   height: 65px;
 }
+
 .nav-li-link {
   font-size: 16px;
   font-weight: 600;
@@ -33,6 +34,7 @@
 .nav-li-link:active .navbar-li {
   color: var(--color) !important;
 }
+
 .nav-li-link:hover .navbar-li {
   color: var(--color);
 }
@@ -143,7 +145,7 @@
     height: 55px;
     width: 50px;
   }
-  
+
   div .navbar-main {
     position: fixed;
     left: -100%;
@@ -370,8 +372,7 @@
   src: url(../fonts/AvenirLTStd-Book.otf);
 }
 
-
-*{
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -508,6 +509,7 @@
     width: 100% !important;
   }
 }
+
 /*  ----------End  About App   -------------*/
 
 /*  ----------Start  About Us  -------------*/
@@ -790,7 +792,7 @@ form .form-btn {
   transition: 0.3s ease-in-out;
 }
 
-.back-to-top-link {
+.back-to-top-scroll {
   background-color: var(--logo-background);
   width: 40px;
   height: 40px;
@@ -798,6 +800,7 @@ form .form-btn {
   right: 1%;
   font-size: 40px;
   cursor: pointer;
+  display: none;
 }
 
 .back-to-top-icon {
@@ -808,7 +811,7 @@ form .form-btn {
 }
 
 .active-scroll {
-  display: none !important;
+  display: flex !important;
 }
 
 @media (min-width: 767px) {

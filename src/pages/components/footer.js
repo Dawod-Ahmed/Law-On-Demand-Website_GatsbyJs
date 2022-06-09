@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Facebook from '../icons/facebook.png'
 // import Twitter from '../icons/twitter.png'
 // import Instagram from '../icons/instagram.png'
 import { Instagram, Facebook, Twitter } from "../../images/images";
 
 const Footer = () => {
-  const backtotop = () => {
-    window.scrollTo(0, 0);
-  };
 
-  window.addEventListener("scroll", function () {
-    var scroll = document.querySelector(".back-to-top-scroll");
-    scroll.classList.toggle("active-scroll", window.scrollY > 250);
-    //   console.log("scroll")
+  const backtotop = () => {
+    // window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+  
+    // window.addEventListener("scroll", function () {
+    //   var scroll = document.querySelector(".back-to-top-scroll");
+    //   scroll.classList.toggle("active-scroll", window.scrollY > 250);
+    // });
+    console.log("scroll")
   });
+  
 
   return (
     <>

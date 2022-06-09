@@ -1,3 +1,10 @@
+export { default as Trusted } from "./icons/trusted.png";
+export { default as Smart } from "./icons/smart.png";
+export { default as Easy } from "./icons/easy.png";
+
+
+
+
 export { default as Logo } from "./img/Logo.png";
 export { default as HeroCellImage } from "./img/heroimg.png";
 export { default as Aboutus } from "./img/aboutus.jpg";

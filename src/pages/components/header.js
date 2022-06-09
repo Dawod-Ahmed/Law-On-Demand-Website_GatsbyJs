@@ -51,6 +51,7 @@ const Header = () => {
                   return (
                     <>
                       <a
+                      key={index}
                         href={`#${value.id}`}
                         className="nav-li-link text-decoration-none  "
                       >

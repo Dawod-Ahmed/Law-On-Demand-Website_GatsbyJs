@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [navExp, setNavExp] = useState(false);
   const [navli, setnavli] = useState([
-    { li: "Home", id: "" },
+    { li: "Home", id: "home" },
     { li: "About App", id: "our_app" },
     { li: "About Us", id: "about_us" },
     { li: "Features", id: "features" },
   ]);
 
-  const navExpand = () => {
-    setNavExp(!navExp);
+  const navExpand = (value) => {
+    if (value === "home") {
+      window.scroll(0, 0);
+      setNavExp(false);
+    } else if (window.innerWidth < 1024) {
+      setNavExp(!navExp);
+    }
   };
 
   return (
@@ -23,25 +29,37 @@ const Header = () => {
       <div className="h-container-parent d-flex justify-content-center bg-white">
         <header className="containers  header-container ">
           <div className="header-main w-100 h-100 d-flex justify-content-between align-items-center">
-            <a href="#" className="desktopview-header-logo h-100">
+            <Link
+              to="/"
+              className="desktopview-header-logo h-100"
+              onClick={() => {
+                navExpand("home");
+              }}
+            >
               <img
                 src="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/3f/1e/9c/3f1e9c9b-d5b5-369a-58d1-6f81a752c627/AppIcon-1x_U007emarketing-0-8-0-0-85-220.png/460x0w.webp"
-                alt=""
+                alt="img"
                 className="header-logo "
               />
-            </a>
+            </Link>
 
             <div className="navbar-main  d-lg-block   ">
               <div className="logo-plus-cross-parent d-block d-flex justify-content-between mt-3">
-                <img
-                  src="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/3f/1e/9c/3f1e9c9b-d5b5-369a-58d1-6f81a752c627/AppIcon-1x_U007emarketing-0-8-0-0-85-220.png/460x0w.webp"
-                  className="nav-logo"
-                />
+                <Link
+                  to="/"
+                  onClick={() => {
+                    navExpand("home");
+                  }}
+                >
+                  <img
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/3f/1e/9c/3f1e9c9b-d5b5-369a-58d1-6f81a752c627/AppIcon-1x_U007emarketing-0-8-0-0-85-220.png/460x0w.webp"
+                    className="nav-logo"
+                  />
+                </Link>
                 <div
                   className="nav-cross-parent d-flex flex-column justify-content-around "
                   onClick={navExpand}
                 >
-                  
                   <div className="w-100  nav-cross nav-cross-top   rounded"></div>
                   <div className="w-100 nav-cross nav-cross-bottom   rounded"></div>
                 </div>
@@ -51,9 +69,10 @@ const Header = () => {
                   return (
                     <>
                       <a
-                      key={index}
+                        key={index}
                         href={`#${value.id}`}
                         className="nav-li-link text-decoration-none  "
+                        onClick={navExpand}
                       >
                         <li className="navbar-li align-self-center">
                           {value.li}

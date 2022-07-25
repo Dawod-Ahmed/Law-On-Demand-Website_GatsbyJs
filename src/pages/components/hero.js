@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HeroCellImage } from "../../images/images";
+
 // import img from "../img/hero_img.svg"
 const Hero = () => {
   // const [theme , settheme]=useState(false);
@@ -12,7 +13,7 @@ const Hero = () => {
   return (
     <>
       <div
-        id="home_link"
+        id="home"
         className="hero-container-parent d-flex justify-content-center "
       >
         <div className="containers  hero_container_main d-flex justify-content-center px-4  mx-0 row">

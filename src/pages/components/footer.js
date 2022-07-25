@@ -3,21 +3,19 @@ import React, { useEffect } from "react";
 // import Twitter from '../icons/twitter.png'
 // import Instagram from '../icons/instagram.png'
 import { Instagram, Facebook, Twitter } from "../../images/images";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-
   const backtotop = () => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
   useEffect(() => {
-  
-    // window.addEventListener("scroll", function () {
-    //   var scroll = document.querySelector(".back-to-top-scroll");
-    //   scroll.classList.toggle("active-scroll", window.scrollY > 250);
-    // });
-    console.log("scroll")
+    window.addEventListener("scroll", function () {
+      var scroll = document.querySelector(".back-to-top-scroll");
+      scroll.classList.toggle("active-scroll", window.scrollY > 250);
+    });
+    console.log("scroll");
   });
-  
 
   return (
     <>
@@ -25,13 +23,13 @@ const Footer = () => {
       <div className="footer-container-parent d-flex justify-content-center  bg-white border-top">
         <div className="container  footer-container justify-content-between d-flex  mx-0 row text-black pt-5 ">
           <div className="f-ul-parent d-flex align-items-center justify-content-lg-center col-10 col-md-6 col-lg-2  text-md-center mb-4 mb-md-4 mb-lg-0 pb-md-4">
-            <a href="#" className="f-logo-img-link">
+            <Link to="/" onClick={backtotop} className="f-logo-img-link">
               <img
                 src="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/3f/1e/9c/3f1e9c9b-d5b5-369a-58d1-6f81a752c627/AppIcon-1x_U007emarketing-0-8-0-0-85-220.png/460x0w.webp"
                 alt="img not found"
                 className="f-logo-img"
               />
-            </a>
+            </Link>
           </div>
 
           <div className="f-ul-parent col-10 col-md-6 col-lg-2  text-md-center mb-3 mb-md-4 mb-lg-0 d-flex flex-column align-items-start  ">
